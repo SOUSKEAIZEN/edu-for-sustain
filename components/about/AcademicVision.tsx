@@ -24,7 +24,7 @@ export default function AcademicVision() {
               Academic Research Paper Authors
             </p>
             <p className="text-sm font-medium text-[#F4EBDD]">
-              Kunal Dagar • Manas Sharma • Nitish Sharma • Dr. Meenakshi Gupta (Mentor)
+              Kunal Dagar • Manojit Sinha • Sanskar Aggarwal • Nitish Sharma • Dr. Meenakshi Gupta (Mentor)
             </p>
             <p className="text-xs text-[#F4EBDD]/60">
               Department of Engineering & Sustainability, Manav Rachna University, Faridabad

@@ -39,7 +39,7 @@ export default function ResearchHeader({
       </div>
 
       <div className="pt-4 border-t border-[#172D49]/15">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3">
           {authors.map((author, idx) => (
             <div key={idx} className="p-3.5 rounded-2xl bg-white border border-[#172D49]/10 shadow-sm space-y-0.5">
               <div className="flex items-center gap-1.5 text-xs font-display font-bold text-[#F47C68] uppercase">

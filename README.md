@@ -24,7 +24,8 @@ Rather than treating sustainability as a detached environmental elective or gene
 This platform is based on the academic research report submitted by:
 
 - **Kunal Dagar** — Student Researcher
-- **Manas Sharma** — Student Researcher
+- **Manojit Sinha** — Student Researcher
+- **Sanskar Aggarwal** — Student Researcher
 - **Nitish Sharma** — Student Researcher
 - **Dr. Meenakshi Gupta** — Faculty Advisor & Mentor
 

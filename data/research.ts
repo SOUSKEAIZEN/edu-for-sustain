@@ -71,7 +71,13 @@ export const researchPaperData: ResearchData = {
       location: "Faridabad, India",
     },
     {
-      name: "Manas Sharma",
+      name: "Manojit Sinha",
+      role: "Student Researcher",
+      institution: "Manav Rachna University",
+      location: "Faridabad, India",
+    },
+    {
+      name: "Sanskar Aggarwal",
       role: "Student Researcher",
       institution: "Manav Rachna University",
       location: "Faridabad, India",

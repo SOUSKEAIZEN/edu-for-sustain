@@ -125,7 +125,8 @@ export default function Footer() {
             </p>
             <ul className="space-y-1 text-xs text-[#F4EBDD]/80">
               <li>• Kunal Dagar</li>
-              <li>• Manas Sharma</li>
+              <li>• Manojit Sinha</li>
+              <li>• Sanskar Aggarwal</li>
               <li>• Nitish Sharma</li>
               <li>• Dr. Meenakshi Gupta (Mentor)</li>
             </ul>
