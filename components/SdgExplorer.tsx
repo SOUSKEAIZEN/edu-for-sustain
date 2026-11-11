@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import Link from "next/link";
-import { Search, Filter, Sparkles, ArrowLeft, RefreshCw, Layers } from "lucide-react";
+import { Search, Filter, RefreshCw, Layers } from "lucide-react";
 import { sdgsData, SDG } from "@/data/sdgs";
 import SdgCard from "./SdgCard";
 import SdgModal from "./SdgModal";
@@ -14,21 +13,17 @@ export default function SdgExplorer() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [activeModalSdg, setActiveModalSdg] = useState<SDG | null>(null);
 
-  // Filtered SDGs
   const filteredSdgs = useMemo(() => {
     return sdgsData.filter((sdg) => {
-      // Category match
       const categoryMatch =
         selectedCategory === "All" ||
         sdg.category.toLowerCase() === selectedCategory.toLowerCase();
 
-      // Search match
       const query = searchQuery.trim().toLowerCase();
       if (!query) return categoryMatch;
 
       const titleMatch = sdg.title.toLowerCase().includes(query);
-      const numberMatch =
-        sdg.number.includes(query) || sdg.id.toString() === query;
+      const numberMatch = sdg.number.includes(query) || sdg.id.toString() === query;
       const descMatch =
         sdg.shortDescription.toLowerCase().includes(query) ||
         sdg.fullDescription.toLowerCase().includes(query);
@@ -49,10 +44,8 @@ export default function SdgExplorer() {
 
   return (
     <div className="w-full">
-      {/* Search & Filter Controls Bar */}
-      <div className="bg-[#FAF5EE] rounded-3xl p-6 sm:p-8 border border-[#172D49]/10 shadow-editorial mb-10">
-        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 pb-6 border-b border-[#172D49]/10">
-          {/* Search Box */}
+      <div className="bg-[#FAF5EE] rounded-3xl p-6 sm:p-7 border border-[#172D49]/10 shadow-sm mb-8">
+        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 pb-5 border-b border-[#172D49]/10">
           <div className="relative flex-grow max-w-lg">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#172D49]/50" />
             <input
@@ -60,7 +53,7 @@ export default function SdgExplorer() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search goals by keyword, number, or Indian scheme..."
-              className="w-full pl-11 pr-4 py-3 rounded-full bg-white border border-[#172D49]/15 text-sm text-[#172D49] placeholder-[#172D49]/40 focus:outline-none focus:ring-2 focus:ring-[#F47C68] transition-all"
+              className="w-full pl-11 pr-4 py-2.5 rounded-full bg-white border border-[#172D49]/15 text-xs sm:text-sm text-[#172D49] placeholder-[#172D49]/40 focus:outline-none focus:ring-2 focus:ring-[#F47C68]"
             />
             {searchQuery && (
               <button
@@ -72,27 +65,25 @@ export default function SdgExplorer() {
             )}
           </div>
 
-          {/* Result counter & Quick Reset */}
           <div className="flex items-center justify-between md:justify-end gap-3 text-xs font-display text-[#172D49]/80">
-            <span className="bg-[#E6DED0] px-3.5 py-1.5 rounded-full font-bold">
+            <span className="bg-[#E6DED0] px-3 py-1 rounded-full font-bold">
               Showing {filteredSdgs.length} of {sdgsData.length} Goals
             </span>
             {(selectedCategory !== "All" || searchQuery) && (
               <button
                 onClick={resetFilters}
-                className="inline-flex items-center gap-1.5 text-[#F47C68] hover:underline font-bold"
+                className="inline-flex items-center gap-1 text-[#F47C68] font-bold"
               >
-                <RefreshCw className="w-3.5 h-3.5" />
+                <RefreshCw className="w-3 h-3" />
                 Reset
               </button>
             )}
           </div>
         </div>
 
-        {/* 5 Ps Category Filter Pills */}
-        <div className="pt-5">
-          <div className="flex items-center gap-2 mb-3">
-            <Filter className="w-4 h-4 text-[#F47C68]" />
+        <div className="pt-4">
+          <div className="flex items-center gap-1.5 mb-2.5">
+            <Filter className="w-3.5 h-3.5 text-[#F47C68]" />
             <span className="font-display text-xs font-bold uppercase tracking-wider text-[#172D49]">
               Filter by UN 5 Ps Architecture:
             </span>
@@ -105,9 +96,9 @@ export default function SdgExplorer() {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-4 py-2 rounded-full text-xs font-display font-medium tracking-wide transition-all ${
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-display font-medium transition-colors ${
                     isActive
-                      ? "bg-[#172D49] text-[#F4EBDD] shadow-md scale-105 font-bold"
+                      ? "bg-[#172D49] text-[#F4EBDD] font-bold"
                       : "bg-white text-[#172D49] border border-[#172D49]/15 hover:bg-[#E6DED0]"
                   }`}
                 >
@@ -119,9 +110,8 @@ export default function SdgExplorer() {
         </div>
       </div>
 
-      {/* Grid of SDG Cards */}
       {filteredSdgs.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {filteredSdgs.map((sdg) => (
             <SdgCard
               key={sdg.id}
@@ -131,25 +121,23 @@ export default function SdgExplorer() {
           ))}
         </div>
       ) : (
-        <div className="bg-[#FAF5EE] rounded-3xl p-12 text-center border border-[#172D49]/10 max-w-lg mx-auto">
-          <Layers className="w-12 h-12 text-[#F47C68] mx-auto mb-4" />
-          <h3 className="font-serif text-2xl font-bold text-[#172D49] mb-2">
-            No Sustainable Development Goals Match
+        <div className="bg-[#FAF5EE] rounded-3xl p-10 text-center border border-[#172D49]/10 max-w-md mx-auto space-y-3">
+          <Layers className="w-10 h-10 text-[#F47C68] mx-auto" />
+          <h3 className="font-serif text-xl font-bold text-[#172D49]">
+            No Matching Goals Found
           </h3>
-          <p className="text-sm text-[#172D49]/70 mb-6">
-            We couldn&apos;t find any SDGs matching &ldquo;{searchQuery}&rdquo; in the{" "}
-            {selectedCategory} category.
+          <p className="text-xs text-[#172D49]/70">
+            No SDGs matched &ldquo;{searchQuery}&rdquo; in the {selectedCategory} category.
           </p>
           <button
             onClick={resetFilters}
-            className="px-5 py-2.5 rounded-full bg-[#172D49] text-white hover:bg-[#F47C68] font-display text-xs font-bold uppercase tracking-wider transition-colors"
+            className="px-4 py-2 rounded-full bg-[#172D49] text-white font-display text-xs font-bold uppercase tracking-wider"
           >
-            Clear All Filters
+            Clear Filters
           </button>
         </div>
       )}
 
-      {/* Detail Modal */}
       <SdgModal
         sdg={activeModalSdg}
         onClose={() => setActiveModalSdg(null)}
