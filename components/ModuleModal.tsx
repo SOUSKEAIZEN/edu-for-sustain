@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { X, Clock, BarChart3, CheckCircle, Lightbulb, MessageSquare, Sparkles } from "lucide-react";
 import { LearningModule } from "@/data/learning";
@@ -21,6 +21,17 @@ export default function ModuleModal({
   const [reflectionInput, setReflectionInput] = useState("");
   const [reflectionSaved, setReflectionSaved] = useState(false);
 
+  useEffect(() => {
+    if (module) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [module]);
+
   if (!module) return null;
 
   const handleSaveReflection = (e: React.FormEvent) => {
@@ -29,12 +40,12 @@ export default function ModuleModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 overflow-y-auto">
       <div onClick={onClose} className="fixed inset-0 bg-[#0F1E31]/75 backdrop-blur-sm" />
 
       <div className="relative w-full max-w-3xl bg-[#FAF5EE] rounded-3xl shadow-xl overflow-hidden border border-[#172D49]/15 z-10 max-h-[92vh] flex flex-col">
         {/* Banner */}
-        <div className="relative h-44 sm:h-52 w-full shrink-0 bg-[#E6DED0]">
+        <div className="relative h-40 sm:h-52 w-full shrink-0 bg-[#E6DED0]">
           <Image
             src={module.image}
             alt={module.title}
@@ -46,46 +57,46 @@ export default function ModuleModal({
 
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full bg-black/40 text-white hover:bg-black/70 transition-colors z-20"
+            className="absolute top-3 right-3 p-2 rounded-full bg-black/40 text-white hover:bg-black/70 transition-colors z-20 min-w-[36px] min-h-[36px] flex items-center justify-center"
             aria-label="Close lesson"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
 
-          <div className="absolute bottom-4 left-6 right-6 text-white">
-            <div className="flex flex-wrap items-center gap-2 mb-1.5">
-              <span className="px-2.5 py-0.5 rounded-full text-xs font-display font-semibold uppercase bg-[#F47C68]">
+          <div className="absolute bottom-3 sm:bottom-4 left-4 sm:left-6 right-4 sm:right-6 text-white">
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1">
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-display font-semibold uppercase bg-[#F47C68]">
                 Module {module.number}
               </span>
-              <span className="px-2.5 py-0.5 rounded-full text-xs font-display bg-white/20 flex items-center gap-1">
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-display bg-white/20 flex items-center gap-1">
                 <Clock className="w-3 h-3" />
                 {module.duration}
               </span>
-              <span className="px-2.5 py-0.5 rounded-full text-xs font-display bg-white/20 flex items-center gap-1">
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-display bg-white/20 flex items-center gap-1">
                 <BarChart3 className="w-3 h-3" />
                 {module.difficulty}
               </span>
             </div>
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold">{module.title}</h3>
+            <h3 className="font-serif text-xl sm:text-3xl font-bold leading-tight">{module.title}</h3>
           </div>
         </div>
 
         {/* Content */}
-        <div className="p-6 overflow-y-auto space-y-6">
+        <div className="p-4 sm:p-6 overflow-y-auto space-y-4 sm:space-y-6">
           <div>
-            <h4 className="font-serif text-lg font-bold text-[#172D49] mb-1.5 flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#F47C68]" />
+            <h4 className="font-serif text-sm sm:text-base font-bold text-[#172D49] mb-1 flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-[#F47C68]" />
               Module Overview
             </h4>
             <p className="text-xs sm:text-sm text-[#172D49]/80 leading-relaxed">{module.overview}</p>
           </div>
 
-          <div className="p-4 rounded-2xl bg-[#E6DED0]/60 border border-[#172D49]/10">
-            <h4 className="font-display text-xs font-bold uppercase tracking-wider text-[#172D49] mb-2 flex items-center gap-1.5">
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-[#E6DED0]/60 border border-[#172D49]/10">
+            <h4 className="font-display text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#172D49] mb-1.5 flex items-center gap-1.5">
               <Lightbulb className="w-3.5 h-3.5 text-[#F47C68]" />
               Key Concept Takeaways
             </h4>
-            <ul className="space-y-1.5">
+            <ul className="space-y-1">
               {module.keyTakeaways.map((takeaway, idx) => (
                 <li key={idx} className="flex items-start gap-2 text-xs text-[#172D49]/85">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#F47C68] mt-1.5 shrink-0" />
@@ -95,19 +106,19 @@ export default function ModuleModal({
             </ul>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {module.sections.map((section, idx) => (
-              <div key={idx} className="p-4 rounded-2xl bg-white border border-[#172D49]/10 shadow-sm space-y-2">
-                <h4 className="font-serif text-lg font-bold text-[#172D49]">
+              <div key={idx} className="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#172D49]/10 shadow-sm space-y-1.5">
+                <h4 className="font-serif text-base sm:text-lg font-bold text-[#172D49]">
                   {idx + 1}. {section.subtitle}
                 </h4>
-                <div className="space-y-1.5 text-xs sm:text-sm text-[#172D49]/80 leading-relaxed">
+                <div className="space-y-1 text-xs sm:text-sm text-[#172D49]/80 leading-relaxed">
                   {section.content.map((p, pIdx) => (
                     <p key={pIdx}>{p}</p>
                   ))}
                 </div>
                 {section.keyHighlight && (
-                  <div className="p-3 rounded-xl bg-[#FAF5EE] border-l-4 border-[#F47C68] text-xs font-medium text-[#172D49] italic">
+                  <div className="p-2.5 sm:p-3 rounded-xl bg-[#FAF5EE] border-l-4 border-[#F47C68] text-xs font-medium text-[#172D49] italic">
                     &ldquo;{section.keyHighlight}&rdquo;
                   </div>
                 )}
@@ -116,20 +127,20 @@ export default function ModuleModal({
           </div>
 
           {/* Reflection */}
-          <div className="p-4 rounded-2xl bg-[#DDE8DE]/70 border border-[#5B7866]/30 space-y-2">
-            <h4 className="font-display text-xs font-bold uppercase tracking-wider text-[#5B7866] flex items-center gap-1.5">
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-[#DDE8DE]/70 border border-[#5B7866]/30 space-y-2">
+            <h4 className="font-display text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#5B7866] flex items-center gap-1.5">
               <MessageSquare className="w-3.5 h-3.5" />
               Critical Reflection Prompt
             </h4>
-            <p className="font-serif text-sm font-bold text-[#172D49]">&ldquo;{module.reflectionPrompt}&rdquo;</p>
+            <p className="font-serif text-xs sm:text-sm font-bold text-[#172D49]">&ldquo;{module.reflectionPrompt}&rdquo;</p>
 
             {reflectionSaved ? (
-              <div className="p-3 rounded-xl bg-white/90 text-xs text-[#172D49] space-y-1">
-                <div className="flex items-center gap-1.5 text-[#5B7866] font-bold">
+              <div className="p-2.5 sm:p-3 rounded-xl bg-white/90 text-xs text-[#172D49] space-y-1">
+                <div className="flex items-center gap-1.5 text-[#5B7866] font-bold text-[11px] sm:text-xs">
                   <CheckCircle className="w-3.5 h-3.5" />
                   Reflection noted in study memory!
                 </div>
-                <p className="italic">&ldquo;{reflectionInput}&rdquo;</p>
+                <p className="italic text-xs">&ldquo;{reflectionInput}&rdquo;</p>
               </div>
             ) : (
               <form onSubmit={handleSaveReflection} className="space-y-2">
@@ -144,7 +155,7 @@ export default function ModuleModal({
                   <button
                     type="submit"
                     disabled={!reflectionInput.trim()}
-                    className="px-3.5 py-1.5 rounded-full bg-[#5B7866] text-white font-display text-xs font-bold uppercase tracking-wider"
+                    className="px-3.5 py-1.5 rounded-full bg-[#5B7866] text-white font-display text-xs font-bold uppercase tracking-wider min-h-[36px]"
                   >
                     Save Reflection
                   </button>
@@ -154,16 +165,16 @@ export default function ModuleModal({
           </div>
 
           {/* Footer actions */}
-          <div className="pt-3 border-t border-[#172D49]/10 flex items-center justify-between gap-3">
-            <span className="text-xs font-display text-[#172D49]/70">Educational Lesson • EfS</span>
-            <div className="flex items-center gap-2">
+          <div className="pt-2 sm:pt-3 border-t border-[#172D49]/10 flex flex-col sm:flex-row items-center justify-between gap-2.5">
+            <span className="text-[11px] sm:text-xs font-display text-[#172D49]/70">Educational Lesson • EfS</span>
+            <div className="flex items-center gap-2 w-full sm:w-auto">
               {onComplete && (
                 <button
                   onClick={() => {
                     onComplete(module.id);
                     onClose();
                   }}
-                  className={`px-4 py-2 rounded-full font-display text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-1.5 ${
+                  className={`flex-1 sm:flex-none px-4 py-2 rounded-full font-display text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 min-h-[40px] ${
                     isCompleted ? "bg-[#5B7866] text-white" : "bg-[#F47C68] text-white"
                   }`}
                 >
@@ -173,7 +184,7 @@ export default function ModuleModal({
               )}
               <button
                 onClick={onClose}
-                className="px-4 py-2 rounded-full bg-[#172D49] text-white font-display text-xs font-bold uppercase tracking-wider"
+                className="flex-1 sm:flex-none px-4 py-2 rounded-full bg-[#172D49] text-white font-display text-xs font-bold uppercase tracking-wider min-h-[40px]"
               >
                 Close
               </button>

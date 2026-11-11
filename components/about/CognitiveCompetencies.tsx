@@ -55,7 +55,7 @@ export default function CognitiveCompetencies() {
           <div className="lg:col-span-5 relative">
             <div className="relative h-72 sm:h-88 w-full rounded-2xl overflow-hidden shadow-md border border-[#172D49]/10 bg-[#E6DED0]">
               <Image
-                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop"
+                src="/images/education/systems-thinking.jpg"
                 alt="Students engaged in collaborative systems mapping workshop"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"

@@ -46,7 +46,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Understanding systemic poverty, social equity, circular local economies, and financial empowerment.",
-    image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-1.jpg",
   },
   {
     id: 2,
@@ -78,7 +78,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Regenerative agriculture, minimizing kitchen and supply-chain food waste, and food system sovereignty.",
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-2.jpg",
   },
   {
     id: 3,
@@ -106,7 +106,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "One Health framework, environmental toxicology, holistic wellness, and community sanitation.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-3.jpg",
   },
   {
     id: 4,
@@ -138,7 +138,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Transformative pedagogy, experiential learning, systems thinking, and environmental stewardship.",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-4.jpg",
   },
   {
     id: 5,
@@ -166,7 +166,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Ecofeminism, gender equity in resource stewardship, and inclusive leadership development.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-5.jpg",
   },
   {
     id: 6,
@@ -198,7 +198,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Hydrological literacy, community water auditing, rainwater harvesting design, and aquatic ecosystem protection.",
-    image: "https://images.unsplash.com/photo-1541888946425-d0fbb186c5f8?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-6.jpg",
   },
   {
     id: 7,
@@ -230,7 +230,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Renewable energy thermodynamics, community microgrids, energy conservation behavior, and decarbonization paths.",
-    image: "https://images.unsplash.com/photo-1509391365360-2e959784a276?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-7.jpg",
   },
   {
     id: 8,
@@ -262,7 +262,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Green economy vocations, fair trade ethics, circular venture creation, and sustainable supply-chain modeling.",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-8.jpg",
   },
   {
     id: 9,
@@ -294,7 +294,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Biomimicry, cradle-to-cradle product design, resilient materials, and low-carbon technological systems.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-9.jpg",
   },
   {
     id: 10,
@@ -322,7 +322,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Environmental justice, equitable resource distribution, human rights, and social inclusion frameworks.",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-10.jpg",
   },
   {
     id: 11,
@@ -354,7 +354,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Urban permaculture, sustainable transport networks, passive solar architecture, and disaster-resilient zoning.",
-    image: "https://images.unsplash.com/photo-1477959858617-67f30bc75b82?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-11.jpg",
   },
   {
     id: 12,
@@ -386,7 +386,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Zero-waste lifestyles, life cycle assessments (LCA), mindful consumerism, and upcycling craftsmanship.",
-    image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-12.jpg",
   },
   {
     id: 13,
@@ -418,7 +418,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Carbon footprint auditing, climate science mechanics, adaptation tactics, and youth climate diplomacy.",
-    image: "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-13.jpg",
   },
   {
     id: 14,
@@ -450,7 +450,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Ocean acidification chemistry, microplastics in food webs, coastal mangrove protection, and sustainable aquaculture.",
-    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-14.jpg",
   },
   {
     id: 15,
@@ -482,7 +482,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Native botany, rewilding methodologies, biodiversity indices, and community-managed forestry conservation.",
-    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-15.jpg",
   },
   {
     id: 16,
@@ -514,7 +514,7 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Civic ethics, constitutional rights, peacebuilding dialogue, institutional transparency, and restorative justice.",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-16.jpg",
   },
   {
     id: 17,
@@ -546,6 +546,6 @@ export const sdgsData: SDG[] = [
       },
     ],
     educationFocus: "Cross-sector collaboration, multi-stakeholder governance, open-access knowledge transfer, and collective impact metrics.",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-17.jpg",
   },
 ];

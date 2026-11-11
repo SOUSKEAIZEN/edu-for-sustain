@@ -28,7 +28,7 @@ export const learningModules: LearningModule[] = [
     difficulty: "Beginner",
     duration: "15 mins",
     category: "Foundations",
-    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/hero/hero-students.jpg",
     overview:
       "Sustainability is not simply environmental protection; it is a holistic philosophy of intergenerational stewardship. Learn how the Brundtland Commission defined sustainability in 1987 and why modern EfS transcends traditional environmental studies.",
     keyTakeaways: [
@@ -63,7 +63,7 @@ export const learningModules: LearningModule[] = [
     difficulty: "Beginner",
     duration: "20 mins",
     category: "Foundations",
-    image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/pillars/environment.jpg",
     overview:
       "The classic 'triple bottom line' or 'nested circles' model demonstrates that the economy is a wholly owned subsidiary of society, and society is completely enclosed within the natural environment.",
     keyTakeaways: [
@@ -105,7 +105,7 @@ export const learningModules: LearningModule[] = [
     difficulty: "Intermediate",
     duration: "25 mins",
     category: "Foundations",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/research/academic-study.jpg",
     overview:
       "Adopted by all 193 United Nations Member States in 2015, the 17 Sustainable Development Goals provide a shared blueprint for peace and prosperity for people and the planet, now and into the future.",
     keyTakeaways: [
@@ -140,7 +140,7 @@ export const learningModules: LearningModule[] = [
     difficulty: "Intermediate",
     duration: "25 mins",
     category: "Ecological",
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/sdgs/sdg-13.jpg",
     overview:
       "Examine the physical science basis of climate change, the distinction between mitigation and adaptation, and practical ecological conservation methods that draw down carbon while rejuvenating habitat.",
     keyTakeaways: [
@@ -175,7 +175,7 @@ export const learningModules: LearningModule[] = [
     difficulty: "Intermediate",
     duration: "20 mins",
     category: "Circularity",
-    image: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/community/action-lifestyle.jpg",
     overview:
       "Global resource extraction has tripled since 1970. Explore how industrial ecology, cradle-to-cradle product design, and conscious consumer choices can decouple economic welfare from resource depletion.",
     keyTakeaways: [
@@ -210,7 +210,7 @@ export const learningModules: LearningModule[] = [
     difficulty: "Intermediate",
     duration: "25 mins",
     category: "Society",
-    image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/research/sustainable-cities.jpg",
     overview:
       "More than 55% of the human population lives in urban areas, a figure set to reach 68% by 2050. Discover how sustainable urban planning creates walkable, resilient, and socially vibrant cities.",
     keyTakeaways: [
@@ -245,7 +245,7 @@ export const learningModules: LearningModule[] = [
     difficulty: "Advanced",
     duration: "30 mins",
     category: "Action",
-    image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/community/volunteering.jpg",
     overview:
       "Knowledge without action breeds eco-anxiety; action without knowledge breeds wasted effort. Learn step-by-step methodologies to conduct campus waste audits, mobilize student coalitions, and implement tangible sustainability projects.",
     keyTakeaways: [

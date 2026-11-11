@@ -24,10 +24,10 @@ export default function SectionHeading({
   }[alignment];
 
   return (
-    <div className={`flex flex-col max-w-3xl mb-12 sm:mb-16 ${alignClass}`}>
+    <div className={`flex flex-col max-w-3xl mb-8 sm:mb-12 md:mb-14 px-2 sm:px-0 ${alignClass}`}>
       {label && (
         <span
-          className={`inline-block px-3.5 py-1 rounded-full text-xs font-display font-semibold tracking-wider uppercase mb-3 ${
+          className={`inline-block px-3 py-1 rounded-full text-[10px] sm:text-xs font-display font-semibold tracking-wider uppercase mb-2.5 ${
             dark
               ? "bg-[#263B52] text-[#F47C68] border border-[#F4EBDD]/15"
               : "bg-[#E6DED0] text-[#172D49] border border-[#172D49]/10"
@@ -38,7 +38,7 @@ export default function SectionHeading({
       )}
 
       <h2
-        className={`font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight ${
+        className={`font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-snug sm:leading-tight ${
           dark ? "text-[#F4EBDD]" : "text-[#172D49]"
         }`}
       >
@@ -52,7 +52,7 @@ export default function SectionHeading({
 
       {description && (
         <p
-          className={`mt-4 text-base sm:text-lg leading-relaxed ${
+          className={`mt-2.5 sm:mt-3.5 text-xs sm:text-base leading-relaxed max-w-2xl ${
             dark ? "text-[#F4EBDD]/80" : "text-[#172D49]/80"
           }`}
         >

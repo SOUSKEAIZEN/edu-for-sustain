@@ -31,6 +31,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://edu-for-sustain.vercel.app"),
   title: "ECOLEARN — Education for Sustainability (EfS)",
   description:
     "Learn today. Sustain tomorrow. Building a sustainable future through education, awareness and meaningful action. Academic platform integrating the UN SDGs, the three pillars of sustainability, and experiential learning.",
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "ECOLEARN",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1200&auto=format&fit=crop",
+        url: "/images/hero/hero-students.jpg",
         width: 1200,
         height: 630,
         alt: "ECOLEARN - Education for Sustainability",

@@ -13,24 +13,24 @@ export default function IntroSection() {
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="bg-[#FAF5EE] rounded-3xl p-8 sm:p-12 border border-[#172D49]/10 shadow-sm">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div className="bg-[#FAF5EE] rounded-3xl p-5 sm:p-8 md:p-12 border border-[#172D49]/10 shadow-sm">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Visual Column */}
           <div className="lg:col-span-5 relative order-2 lg:order-1">
-            <div className="relative h-72 sm:h-88 w-full rounded-2xl overflow-hidden shadow-md border border-[#172D49]/10 bg-[#E6DED0]">
+            <div className="relative h-56 sm:h-72 md:h-80 w-full rounded-2xl overflow-hidden shadow-sm border border-[#172D49]/10 bg-[#E6DED0]">
               <Image
-                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop"
+                src="/images/education/classroom-sustainable.jpg"
                 alt="Educators and students collaborating over sustainable environmental model"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#172D49]/70 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <p className="font-serif text-sm font-bold">
-                  Beyond Rote Environmental Memorization
+              <div className="absolute bottom-3 left-3 right-3 text-white">
+                <p className="font-serif text-xs sm:text-sm font-bold">
+                  Beyond Rote Memorization
                 </p>
-                <p className="font-display text-[11px] text-[#F4EBDD]/80">
+                <p className="font-display text-[10px] sm:text-[11px] text-[#F4EBDD]/80">
                   Nurturing critical questioning and civic responsibility.
                 </p>
               </div>
@@ -38,27 +38,27 @@ export default function IntroSection() {
           </div>
 
           {/* Content Column */}
-          <div className="lg:col-span-7 space-y-5 order-1 lg:order-2">
-            <span className="inline-block px-3.5 py-1 rounded-full text-xs font-display font-semibold tracking-wider uppercase bg-[#E6DED0] text-[#172D49]">
+          <div className="lg:col-span-7 space-y-4 order-1 lg:order-2">
+            <span className="inline-block px-3 py-1 rounded-full text-[10px] sm:text-xs font-display font-semibold tracking-wider uppercase bg-[#E6DED0] text-[#172D49]">
               Foundational Concept
             </span>
 
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#172D49] leading-tight">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#172D49] leading-tight">
               What is Education for <span className="text-[#F47C68]">Sustainability?</span>
             </h2>
 
-            <p className="text-base text-[#172D49]/85 leading-relaxed font-sans">
+            <p className="text-xs sm:text-base text-[#172D49]/85 leading-relaxed font-sans">
               Education for Sustainability (EfS) is an integrated approach that incorporates ecological understanding, systems thinking, and social responsibility into every dimension of education.
             </p>
 
-            <p className="text-sm text-[#172D49]/75 leading-relaxed font-sans">
-              Unlike conventional environmental studies—which often treat nature as an isolated subject to be memorized—EfS emphasizes that <strong>sustainability goes far beyond environmental conservation</strong>, incorporating social equity, democratic inclusion, and circular economic resilience.
+            <p className="text-xs sm:text-sm text-[#172D49]/75 leading-relaxed font-sans">
+              Unlike conventional environmental studies, EfS emphasizes that <strong>sustainability goes far beyond environmental conservation</strong>, incorporating social equity, democratic inclusion, and circular economic resilience.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
               {highlights.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-[#172D49]/10">
-                  <CheckCircle2 className="w-4 h-4 text-[#5B7866] shrink-0" />
+                <div key={idx} className="flex items-center gap-2 p-2 sm:p-2.5 rounded-xl bg-white border border-[#172D49]/10">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#5B7866] shrink-0" />
                   <span className="text-xs font-medium text-[#172D49]">{item}</span>
                 </div>
               ))}

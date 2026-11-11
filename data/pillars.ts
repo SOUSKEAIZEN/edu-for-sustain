@@ -16,7 +16,7 @@ export const pillarsData: PillarData[] = [
     title: "ENVIRONMENT",
     tagline: "Planetary Boundaries & Natural Capital",
     accentColor: "#5B7866",
-    image: "https://images.unsplash.com/photo-1511497584788-87676104235f?q=80&w=700&auto=format&fit=crop",
+    image: "/images/pillars/environment.jpg",
     points: [
       "Climate action & decarbonization",
       "Biodiversity & wildlife habitats",
@@ -38,7 +38,7 @@ export const pillarsData: PillarData[] = [
     title: "SOCIETY",
     tagline: "Human Well-being & Social Equity",
     accentColor: "#F47C68",
-    image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=700&auto=format&fit=crop",
+    image: "/images/pillars/society.jpg",
     points: [
       "Universal quality education (SDG 4)",
       "Gender & socioeconomic equality",
@@ -60,7 +60,7 @@ export const pillarsData: PillarData[] = [
     title: "ECONOMY",
     tagline: "Regenerative Prosperity & Circularity",
     accentColor: "#263B52",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=700&auto=format&fit=crop",
+    image: "/images/pillars/economy.jpg",
     points: [
       "Sustainable & regenerative growth",
       "Responsible production & circularity",
