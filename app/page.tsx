@@ -5,6 +5,7 @@ import PillarsSection from "@/components/home/PillarsSection";
 import ChallengesSection from "@/components/home/ChallengesSection";
 import FeaturedSdgsSection from "@/components/home/FeaturedSdgsSection";
 import LearningPreviewSection from "@/components/home/LearningPreviewSection";
+import EwastePromoSection from "@/components/home/EwastePromoSection";
 import CtaSection from "@/components/home/CtaSection";
 
 export const metadata = {
@@ -22,6 +23,7 @@ export default function HomePage() {
       <ChallengesSection />
       <FeaturedSdgsSection />
       <LearningPreviewSection />
+      <EwastePromoSection />
       <CtaSection />
     </div>
   );

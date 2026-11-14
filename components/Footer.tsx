@@ -59,6 +59,15 @@ export default function Footer() {
               <li><Link href="/learn" className="hover:text-[#F47C68] transition-colors">Learning Modules & Quiz</Link></li>
               <li><Link href="/take-action" className="hover:text-[#F47C68] transition-colors">Action Checklist & Challenge</Link></li>
               <li><Link href="/research" className="hover:text-[#F47C68] transition-colors">Academic Paper & Citations</Link></li>
+              <li>
+                <Link
+                  href="/e-waste"
+                  className="hover:text-white transition-colors inline-flex items-center gap-1.5 font-bold text-[#F47C68]"
+                >
+                  <span>ECOCYCLE E-Waste Finder</span>
+                  <span className="text-[10px] bg-[#F47C68]/20 px-1.5 py-0.2 rounded uppercase font-mono">New</span>
+                </Link>
+              </li>
             </ul>
           </div>
 

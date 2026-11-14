@@ -208,6 +208,35 @@ ECOLEARN is 100% frontend and fully optimized for zero-config deployment on [Ver
 
 ---
 
+## ♻️ ECOCYCLE — Smart E-Waste Collection Point Finder
+
+**ECOCYCLE** is an integrated extension within this repository located at `/e-waste`. It serves as a smart electronic waste discovery, triage, and collection logistics prototype tailored specifically for **Delhi, New Delhi, and Haryana**.
+
+### 🌟 Key Features & Modules
+1. **Overview & Landing (`/e-waste`):** Highlights core electronics streams, statistics, how circular recovery works, AI triage launcher, and IoT telemetry monitors.
+2. **Interactive Map Explorer (`/e-waste/explore`):** Dual-engine geospatial explorer featuring OpenStreetMap (via Leaflet) and an offline SVG vector map of Delhi NCR, Haversine proximity radius filtering (5–60 km), category filtering, and location detection.
+3. **Centres Directory (`/e-waste/centres` & `/e-waste/centres/[id]`):** Searchable registry of 22 demonstration collection points across Delhi and Haryana, complete with operating schedules, reported capacity bars, accepted categories, sample contact details, and Google Maps directions.
+4. **Pickup Requests & Tracking (`/e-waste/requests`):** End-to-end simulated doorstep collection booking and tracking portal with lifecycle status audit timeline.
+5. **Practical Safety & Preparation Guide (`/e-waste/guide`):** Practical handling precautions for lithium batteries, NIST SP 800-88 / DoD drive sanitization, and regulatory coverage under MoEFCC E-Waste Rules 2022.
+6. **Operator Portal (`/e-waste/operator`):** Demonstration panel allowing facility operators to review incoming pickups, schedule collection vans, and update depot intake capacity.
+7. **Administrator Dashboard (`/e-waste/admin`):** Comprehensive registry management for adding, editing, or deleting facilities and executing demo data resets.
+8. **Regional Analytics Dashboard (`/e-waste/analytics`):** 10 interactive charts and telemetry views visualizing material category distribution, monthly diversion volumes, and depot utilization.
+
+### 📍 Geographical Scope (Delhi NCR & Haryana)
+All demonstration centres are strictly localized within:
+- **Delhi / New Delhi:** Connaught Place, Dwarka, Rohini, Lajpat Nagar, Saket, Karol Bagh, Okhla Industrial Area, Nehru Place, Anand Vihar.
+- **Haryana:** Faridabad, Gurugram, IMT Manesar, Sonipat, Bahadurgarh, Panipat, Rohtak, Palwal.
+
+### 🚀 Future Production Migration Plan
+When transitioning ECOCYCLE from an academic demonstration to a live operational platform:
+- **Database Backend:** Replace `localStorage` and `data/ewaste/*.ts` with a managed PostgreSQL instance (e.g. Supabase, Neon, or AWS RDS) with PostGIS extension for high-performance spatial indexing.
+- **Authentication & RBAC:** Implement NextAuth.js or Auth0 to enforce strict role-based access control distinguishing Citizens, Certified Facility Operators, and Municipal Environmental Officers.
+- **Real AI Inference:** Replace the simulated classifier with a fine-tuned PyTorch / TensorFlow computer vision model deployed via FastAPI or Vertex AI to classify uploaded e-waste images in real time.
+- **Physical IoT Sensor Feeds:** Ingest MQTT/HTTP telemetry from physical ultrasonic LoRaWAN sensors deployed in municipal smart bins to automate vehicle route scheduling.
+- **Certified Facility Onboarding:** Connect directly with state pollution control board (SPCB) registered Extended Producer Responsibility (EPR) recyclers.
+
+---
+
 ## 📄 Academic License & Disclaimer
 
 Developed solely for educational, academic, and non-commercial research purposes for college submission at **Manav Rachna University**. All United Nations SDG trademarks and icons belong to the United Nations. Mapped government schemes belong to their respective Union Ministries of the Government of India.
