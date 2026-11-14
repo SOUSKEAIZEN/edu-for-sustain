@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Sparkles, ChevronDown } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Sparkles, ChevronDown, Recycle } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -9,9 +9,18 @@ export default function HeroSection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
         {/* Left Column: Heading & Calls to Action */}
         <div className="lg:col-span-7 space-y-5 sm:space-y-6">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E6DED0] border border-[#172D49]/10 text-[10px] sm:text-xs font-display font-bold uppercase tracking-wider text-[#172D49]">
-            <Sparkles className="w-3 h-3 text-[#F47C68]" />
-            <span>Academic Sustainability Initiative • EfS</span>
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E6DED0] border border-[#172D49]/10 text-[10px] sm:text-xs font-display font-bold uppercase tracking-wider text-[#172D49]">
+              <Sparkles className="w-3 h-3 text-[#F47C68]" />
+              <span>Academic Sustainability Initiative • EfS</span>
+            </div>
+            <Link
+              href="/e-waste"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#5B7866]/15 hover:bg-[#5B7866]/25 border border-[#5B7866]/30 text-[10px] sm:text-xs font-display font-bold uppercase tracking-wider text-[#5B7866] transition-colors"
+            >
+              <Recycle className="w-3 h-3 text-[#F47C68]" />
+              <span>New: ECOCYCLE E-Waste Finder →</span>
+            </Link>
           </div>
 
           <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight text-[#172D49] leading-[1.12] sm:leading-[1.08]">
@@ -30,17 +39,25 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
             <Link
               href="/sdgs"
-              className="inline-flex items-center justify-center gap-2 bg-[#F47C68] hover:bg-[#E46A55] text-white px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-display font-bold tracking-wider uppercase shadow-md transition-transform duration-150 hover:-translate-y-0.5 min-h-[44px]"
+              className="inline-flex items-center justify-center gap-2 bg-[#F47C68] hover:bg-[#E46A55] text-white px-5 sm:px-6 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-display font-bold tracking-wider uppercase shadow-md transition-transform duration-150 hover:-translate-y-0.5 min-h-[44px]"
             >
               <span>Explore the SDGs</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
 
             <Link
-              href="/about"
-              className="inline-flex items-center justify-center gap-2 bg-[#172D49] hover:bg-[#263B52] text-[#F4EBDD] px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-display font-bold tracking-wider uppercase transition-colors min-h-[44px]"
+              href="/e-waste"
+              className="inline-flex items-center justify-center gap-2 bg-[#5B7866] hover:bg-[#4b6354] text-white px-5 sm:px-6 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-display font-bold tracking-wider uppercase shadow-md transition-transform duration-150 hover:-translate-y-0.5 min-h-[44px]"
             >
-              <span>Discover Our Mission</span>
+              <Recycle className="w-4 h-4 text-[#F47C68]" />
+              <span>E-Waste Finder</span>
+            </Link>
+
+            <Link
+              href="/about"
+              className="inline-flex items-center justify-center gap-2 bg-[#172D49] hover:bg-[#263B52] text-[#F4EBDD] px-5 sm:px-6 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-display font-bold tracking-wider uppercase transition-colors min-h-[44px]"
+            >
+              <span>Our Mission</span>
               <ArrowUpRight className="w-4 h-4 text-[#F47C68]" />
             </Link>
           </div>
