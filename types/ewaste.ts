@@ -64,7 +64,7 @@ export interface CollectionCentre {
   contactEmail: string;
   illustrativeRating: number;
   reviewCount: number;
-  verificationBadge: "Demo Verified" | "Sample Facility" | "Community Partner";
+  verificationBadge: "Sample Centre" | "Sample Facility" | "Community Partner" | "Demo Verified";
   isDemoRecord: true;
   lastUpdated: string;
   facilitatesPickup: boolean;

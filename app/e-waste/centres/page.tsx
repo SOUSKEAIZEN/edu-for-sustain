@@ -96,7 +96,7 @@ function CentresDirectoryContent() {
             Delhi NCR & Haryana Collection Points
           </h1>
           <p className="text-xs sm:text-sm text-[#172D49]/70 font-sans mt-0.5">
-            Discover authorized e-waste drop points, compare reported storage capacity, and find facilities accepting your electronics.
+            Discover sample e-waste drop points, compare demonstration storage capacity, and find facilities accepting your electronics across Delhi NCR &amp; Haryana.
           </p>
         </div>
 
@@ -236,7 +236,7 @@ function CentresDirectoryContent() {
           </div>
 
           <div className="text-xs text-[#172D49]/70 font-sans">
-            Showing <strong>{filteredAndRankedResults.length}</strong> of {allCentres.length} demonstration points
+            Showing <strong>{filteredAndRankedResults.length}</strong> of {allCentres.length} sample collection points
           </div>
         </div>
       </div>

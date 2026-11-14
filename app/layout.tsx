@@ -1,9 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Playfair_Display, DM_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
+import AppShell from "@/components/AppShell";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -75,10 +73,7 @@ export default function RootLayout({
       className={`${playfair.variable} ${dmSans.variable} ${spaceGrotesk.variable} scroll-smooth`}
     >
       <body className="min-h-screen flex flex-col bg-[#F4EBDD] text-[#172D49] font-sans antialiased selection:bg-[#F47C68] selection:text-white">
-        <Navbar />
-        <main className="flex-grow pt-20">{children}</main>
-        <Footer />
-        <ScrollToTop />
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );

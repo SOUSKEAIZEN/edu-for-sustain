@@ -81,7 +81,7 @@ export default function CentreCard({
       {/* Capacity Indicator Bar */}
       <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#172D49]/10 mb-4">
         <div className="flex items-center justify-between text-xs mb-1.5 font-display">
-          <span className="text-[#172D49]/70">Reported Intake Capacity:</span>
+          <span className="text-[#172D49]/70">Demonstration Capacity:</span>
           <span
             className={`font-bold ${
               isFull

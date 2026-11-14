@@ -132,7 +132,7 @@ export default function CentreDetailPage() {
               <span className="font-mono font-bold text-[#172D49]">{centre.postalCode}</span>
             </div>
             <div>
-              <span className="text-[#172D49]/60 font-sans block">Intake Capacity:</span>
+              <span className="text-[#172D49]/60 font-sans block">Demonstration Capacity:</span>
               <span className="font-bold text-[#172D49]">
                 {centre.capacityPercentage !== null ? `${centre.capacityPercentage}% utilized` : "Standard buffer"}
               </span>

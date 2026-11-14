@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Globe, Menu, X, ArrowUpRight, Sparkles, Recycle } from "lucide-react";
+import { Globe, Menu, X, Recycle } from "lucide-react";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 
 const navLinks = [
@@ -13,7 +13,6 @@ const navLinks = [
   { href: "/learn", label: "Learn" },
   { href: "/take-action", label: "Take Action" },
   { href: "/research", label: "Research" },
-  { href: "/e-waste", label: "E-Waste" },
 ];
 
 export default function Navbar() {
@@ -92,27 +91,21 @@ export default function Navbar() {
             <div className="hidden md:flex items-center gap-2.5">
               <Link
                 href="/e-waste"
-                className="inline-flex items-center gap-1.5 bg-[#5B7866] hover:bg-[#4a6353] text-white px-3.5 py-2 rounded-full text-xs sm:text-sm font-display font-medium shadow-sm transition-transform hover:-translate-y-0.5 min-h-[40px]"
+                className="inline-flex items-center gap-1.5 bg-[#F47C68] hover:bg-[#E46A55] text-white px-4 py-2 rounded-full text-xs sm:text-sm font-display font-semibold shadow-sm transition-transform hover:-translate-y-0.5 min-h-[40px]"
               >
-                <Recycle className="w-3.5 h-3.5 text-[#F47C68]" />
+                <Recycle className="w-4 h-4" />
                 <span>E-Waste Finder</span>
-              </Link>
-              <Link
-                href="/sdgs"
-                className="inline-flex items-center gap-1.5 bg-[#F47C68] hover:bg-[#E46A55] text-white px-4 py-2 rounded-full text-xs sm:text-sm font-display font-medium shadow-sm transition-transform hover:-translate-y-0.5 min-h-[40px]"
-              >
-                <span>Explore SDGs</span>
-                <ArrowUpRight className="w-4 h-4" />
               </Link>
             </div>
 
             {/* Mobile Hamburger & Quick Pill */}
             <div className="flex items-center gap-2 lg:hidden">
               <Link
-                href="/sdgs"
-                className="md:hidden text-xs bg-[#F47C68] text-white px-3 py-1.5 rounded-full font-display font-medium"
+                href="/e-waste"
+                className="md:hidden text-xs bg-[#F47C68] text-white px-3 py-1.5 rounded-full font-display font-medium flex items-center gap-1"
               >
-                SDGs
+                <Recycle className="w-3 h-3" />
+                <span>E-Waste</span>
               </Link>
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -181,28 +174,10 @@ export default function Navbar() {
             <Link
               href="/e-waste"
               onClick={() => setIsOpen(false)}
-              className="w-full flex items-center justify-center gap-2 bg-[#5B7866] text-white px-5 py-3.5 rounded-2xl font-display text-sm font-bold shadow-sm min-h-[48px]"
+              className="w-full flex items-center justify-center gap-2 bg-[#F47C68] hover:bg-[#E46A55] text-white px-5 py-3.5 rounded-2xl font-display text-sm font-bold shadow-sm min-h-[48px]"
             >
-              <Recycle className="w-4 h-4 text-[#F47C68]" />
-              <span>ECOCYCLE E-Waste Finder</span>
-              <span className="text-[10px] bg-[#F47C68] text-white px-1.5 py-0.5 rounded font-bold uppercase ml-1">
-                New
-              </span>
-            </Link>
-            <Link
-              href="/sdgs"
-              onClick={() => setIsOpen(false)}
-              className="w-full flex items-center justify-center gap-2 bg-[#F47C68] text-white px-5 py-3.5 rounded-2xl font-display text-sm font-bold shadow-sm min-h-[48px]"
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>Interactive SDG Explorer</span>
-            </Link>
-            <Link
-              href="/learn"
-              onClick={() => setIsOpen(false)}
-              className="w-full flex items-center justify-center gap-2 bg-[#263B52] text-[#F4EBDD] px-5 py-3.5 rounded-2xl font-display text-sm font-bold min-h-[48px]"
-            >
-              <span>Explore Learning Modules</span>
+              <Recycle className="w-4 h-4" />
+              <span>E-Waste Finder</span>
             </Link>
           </div>
         </div>
